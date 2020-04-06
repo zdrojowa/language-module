@@ -1,0 +1,56 @@
+languages:
+  path: /dashboard/languages
+  controller: Selene\Modules\LanguageModule\Http\Controllers\LanguageController@index
+  methods:
+    - GET
+  permission: LanguageModule
+
+languages.get:
+  path: /dashboard/languages/get
+  controller: Selene\Modules\LanguageModule\Http\Controllers\LanguageController@get
+  methods:
+    - GET
+  permission: LanguageModule
+
+languages.ajax:
+  path: /dashboard/languages/ajax
+  controller: Selene\Modules\LanguageModule\Http\Controllers\LanguageController@ajax
+  methods:
+    - POST
+  permission: LanguageModule
+
+languages.create:
+  path: /dashboard/languages/create
+  controller: Selene\Modules\LanguageModule\Http\Controllers\LanguageController@create
+  methods:
+    - GET
+  permission: LanguageModule.languages.add
+
+languages.store:
+  path: /dashboard/languages
+  controller: Selene\Modules\LanguageModule\Http\Controllers\LanguageController@store
+  methods:
+    - POST
+  permission: LanguageModule.languages.add
+
+languages.edit:
+  path: /dashboard/languages/{{language}}/edit
+  controller: Selene\Modules\LanguageModule\Http\Controllers\LanguageController@edit
+  methods:
+    - GET
+  permission: LanguageModule.languages.edit
+
+languages.update:
+  path: /dashboard/languages/{{language}}
+  controller: Selene\Modules\LanguageModule\Http\Controllers\LanguageController@update
+  methods:
+    - PUT
+    - PATCH
+  permission: LanguageModule.languages.edit
+
+languages.destroy:
+  path: /dashboard/languages/{{language}}
+  controller: Selene\Modules\LanguageModule\Http\Controllers\LanguageController@destroy
+  methods:
+    - DELETE
+  permission: LanguageModule.languages.delete

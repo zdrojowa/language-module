@@ -1,0 +1,6 @@
+languages.add:
+  name: Dodawanie
+languages.edit:
+  name: Edytowanie
+languages.delete:
+  name: Usuwanie

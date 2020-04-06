@@ -1,0 +1,7 @@
+name: LanguageModule
+version: 1.0.0
+
+aclAnchor: LanguageModule
+aclName: Języki
+
+routePrefix: LanguageModule
