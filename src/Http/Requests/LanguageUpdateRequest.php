@@ -1,8 +1,6 @@
 <?php
 
-namespace Selene\LanguageModule\Http\Requests;
-
-use Selene\Modules\LanguageModule\Http\Requests\LanguageRequest;
+namespace Selene\Modules\LanguageModule\Http\Requests;
 
 /**
  * @property mixed language

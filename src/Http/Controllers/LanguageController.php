@@ -7,8 +7,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use Selene\LanguageModule\Http\Requests\LanguageStoreRequest;
-use Selene\LanguageModule\Http\Requests\LanguageUpdateRequest;
+use Selene\Modules\LanguageModule\Http\Requests\LanguageStoreRequest;
+use Selene\Modules\LanguageModule\Http\Requests\LanguageUpdateRequest;
 use Selene\Modules\DashboardModule\ZdrojowaTable;
 use Selene\Modules\LanguageModule\Models\Language;
 

@@ -4,3 +4,6 @@
 
 ### Changes
 - Init module
+
+## Version 1.0.1
+- namespace fixes

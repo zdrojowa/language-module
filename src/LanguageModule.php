@@ -2,7 +2,6 @@
 
 namespace Selene\Modules\LanguageModule;
 
-
 use Illuminate\Support\Arr;
 use Selene\Modules\LanguageModule\Models\Language;
 use Selene\Modules\Module;
