@@ -1,5 +1,5 @@
 languages:
   name: Języki
-  icon: mdi mdi-translate
+  icon: globe
   permission: LanguageModule
-  route: LanguageModule::languages
+  route: LanguageModule::index

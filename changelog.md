@@ -10,3 +10,6 @@
 
 ## Version 1.0.2
 - add flags icons
+
+## Version 2.0.0
+- Laravel 8 + Vue

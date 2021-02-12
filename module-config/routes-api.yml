@@ -1,0 +1,18 @@
+api.languages:
+  path: /languages
+  controller: Selene\Modules\LanguageModule\Http\Controllers\ApiController@get
+  methods:
+    - GET
+
+api.checkKey:
+  path: /languages/check-key
+  controller: Selene\Modules\LanguageModule\Http\Controllers\ApiController@checkKey
+  methods:
+    - GET
+
+api.remove:
+  path: /languages/remove/{{language}}
+  controller: Selene\Modules\LanguageModule\Http\Controllers\ApiController@remove
+  methods:
+    - DELETE
+  permission: LanguageModule.delete

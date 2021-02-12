@@ -1,41 +1,25 @@
-@extends('DashboardModule::dashboard.index')
+@extends('DashboardModule::dashboard.index', ['title' => (isset($language) ? 'Edytowanie' : 'Dodawanie') . ' języka'])
+
+@section('navbar-actions')
+    <b-nav-form>
+        <b-button size="sm" class="my-2 my-sm-0" type="button" to="{{ route('LanguageModule::index') }}">
+            <b-icon-arrow-left></b-icon-arrow-left> Do listy
+        </b-button>
+    </b-nav-form>
+@endsection
 
 @section('content')
-    <div class="content-wrapper">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        @include('DashboardModule::partials.alerts')
+    <b-container fluid>
+        <language
+                route="{{ isset($language) ? route('LanguageModule::update', ['language' => $language]) : route('LanguageModule::store') }}"
+                csrf="{{ csrf_token() }}"
+                check-key-route="{{ route('LanguageModule::api.checkKey') }}"
+                :language="{{ isset($language) ? json_encode($language) : json_encode(null) }}"
+        >
+        </language>
+    </b-container>
+@endsection
 
-                        <h4 class="card-title">Dodawanie nowego języka</h4>
-                        <form method="POST" action="{{route('LanguageModule::languages.update', ['language' => $language])}}">
-                            @csrf
-                            @method('PUT')
-
-                            <div class="form-group @error('name') has-danger @enderror">
-                                <label for="">Nazwa</label>
-                                <input type="text" class="form-control" name="name" placeholder="Wpisz nazwe" value="{{$language->name}}">
-                                @error('name')
-                                <small class="error mt-1 text-danger d-block">{{ $message }}</small>
-                                @enderror
-                            </div>
-
-                            <div class="form-group @error('short_name') has-danger @enderror">
-                                <label for="">Prefiks</label>
-                                <input type="text" class="form-control" name="short_name" placeholder="Wpisz prefiks" value="{{$language->short_name}}">
-                                <small>Krótki prefiks np. pl, en</small>
-                                @error('short_name')
-                                <small class="error mt-1 text-danger d-block">{{ $message }}</small>
-                                @enderror
-                            </div>
-
-                            <button type="submit" class="float-right mt-2 btn btn-primary mr-2">Zapisz</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+@section('javascripts')
+    <script src="{{ mix("vendor/js/LanguageModule.js") }}"></script>
 @endsection

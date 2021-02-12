@@ -1,6 +1,6 @@
-languages.add:
+add:
   name: Dodawanie
-languages.edit:
+edit:
   name: Edytowanie
-languages.delete:
+delete:
   name: Usuwanie
