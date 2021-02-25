@@ -15,11 +15,6 @@ Via Composer
 $ composer require zdrojowa/language-module
 ```
 
-NPM required:
-``` bash
-"vue-flag-icon": "^1.0.6",
-```
-
 ## Usage
 - Add mix.module('LanguageModule', 'vendor/zdrojowa/language-module'); in webpack.mix.js
 - npm run dev

@@ -15,4 +15,12 @@ class Language extends Model
     protected $primaryKey = '_id';
 
     protected $fillable = ['name', 'short_name'];
+    
+    public static function getAllSelect() {
+        $langs = [];
+        foreach (Language::all() as $lang) {
+            $langs[] = ['value' => $lang->short_name, 'text' => $lang->name];
+        }
+        return $langs;
+    }
 }
